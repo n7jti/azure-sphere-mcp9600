@@ -1,0 +1,17 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.buildDirectory": "${workspaceRoot}/out/${buildType}-${command:azuresphere.AzureSphereTargetApiSet}",
+    "cmake.buildToolArgs": [
+        "-v"
+    ],
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "${command:azuresphere.AzureSphereSdkDir}/CMakeFiles/AzureSphereToolchain.cmake",
+        "AZURE_SPHERE_TARGET_API_SET": "latest-lts"
+    },
+    "cmake.configureOnOpen": true,
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "cSpell.language": "en-US,en",
+    "C_Cpp.default.includePath": [
+        "${command:azuresphere.AzureSphereSdkDir}/Sysroots/5/usr/include"
+    ]
+}

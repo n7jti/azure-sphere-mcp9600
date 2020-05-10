@@ -2,7 +2,10 @@
 #  Licensed under the MIT License.
 
 CMAKE_MINIMUM_REQUIRED(VERSION 3.11)
-PROJECT(Thermometer)
+PROJECT(Thermometer CXX)
+
+azsphere_configure_tools(TOOLS_REVISION "20.04")
+azsphere_configure_api(TARGET_API_SET "5")
 
 # Create executable
 ADD_EXECUTABLE(
@@ -14,5 +17,6 @@ ADD_EXECUTABLE(
 
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} applibs pthread gcc_s c)
 
-# Add MakeImage post-build command
-INCLUDE("${AZURE_SPHERE_MAKE_IMAGE_FILE}")
+azsphere_target_add_image_package(${PROJECT_NAME})
+
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")

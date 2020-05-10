@@ -58,7 +58,7 @@ uint16_t CMcp9600::read16(int fd, I2C_DeviceAddress address, uint8_t reg) {
 }
 
 /*
-Check bits transfered to and from I2C
+Check bits transferred to and from I2C
 */
 bool CMcp9600::CheckTransferSize(const char *desc, size_t expectedBytes,
                                  ssize_t actualBytes) {
@@ -150,9 +150,9 @@ MCP9600_ADC_RES CMcp9600::getAdcResolution() const {
 }
 
 /*
-Get Temperature using Hot Junction Themperature Register
+Get Temperature using Hot Junction Temperature Register
 */
-float CMcp9600::getTemprature() const {
+float CMcp9600::getTemperature() const {
   float result;
   uint8_t reg = MCP9600_REG_HOT_JUNCTION;
   int16_t tempBits = static_cast<int16_t>(read16(_fd, _address, reg));

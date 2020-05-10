@@ -12,11 +12,13 @@
 #include <stdlib.h>
 
 #define I2C_STRUCTS_VERSION 0
-#include <applibs/i2c.h>
+#include <applibs\i2c.h>
 #include <applibs\log.h>
 
 // Constants from MCP9600 datasheet:
 // http://ww1.microchip.com/downloads/en/DeviceDoc/MCP9600-Family-Data-Sheet-20005426E.pdf
+
+// cSpell:ignore HYST, TALERT, DEVICEID
 
 constexpr uint8_t MCP9600_ADDR = 0x67;
 constexpr uint8_t MCP9600_REG_HOT_JUNCTION = 0x00;
@@ -68,7 +70,7 @@ public:
   uint8_t getFilterCoefficients() const;
   bool setAdcResolution(MCP9600_ADC_RES res);
   MCP9600_ADC_RES getAdcResolution() const;
-  float getTemprature() const;
+  float getTemperature() const;
   ~CMcp9600();
 
 private:
