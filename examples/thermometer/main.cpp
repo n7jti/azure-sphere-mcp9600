@@ -9,7 +9,7 @@ extern "C" void __cxa_pure_virtual() {
     ;
 }
 
-float toFarenheit(float c) {
+float toFahrenheit(float c) {
   float f;
   f = c * 1.8f + 32;
   return f;
@@ -30,7 +30,7 @@ int main(void) {
   while (!quit) {
     float temperature = tempSensor.getTemperature();
     Log_Debug("Raw Temperature(C): %f\n", temperature);
-    Log_Debug("Tempreture(F): %f\n", toFarenheit(temperature));
+    Log_Debug("Temperature(F): %f\n", toFahrenheit(temperature));
     nanosleep(&sleep1s, nullptr);
   }
 
