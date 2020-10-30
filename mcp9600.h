@@ -12,8 +12,8 @@
 #include <stdlib.h>
 
 #define I2C_STRUCTS_VERSION 0
-#include <applibs\i2c.h>
-#include <applibs\log.h>
+#include <applibs/i2c.h>
+#include <applibs/log.h>
 
 // Constants from MCP9600 datasheet:
 // http://ww1.microchip.com/downloads/en/DeviceDoc/MCP9600-Family-Data-Sheet-20005426E.pdf
